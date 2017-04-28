@@ -10,6 +10,7 @@ import com.redhat.coolstore.model.Product;
 
 @FeignClient(name = "catalogService", url = "${catalog.service.url}")
 interface CatalogService {
+	
 	@RequestMapping(method = RequestMethod.GET, value = "/api/products")
-    List<Product> products();
+	List<Product> products();
 }
