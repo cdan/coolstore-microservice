@@ -36,7 +36,7 @@ import feign.Feign;
 import feign.jackson.JacksonDecoder;
 
 @Component
-public class ShoppingCartServiceImplDecisionServer implements ShoppingCartService {
+public class ShoppingCartServiceImplDecisionServer {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(ShoppingCartServiceImplDecisionServer.class);
 
@@ -76,7 +76,7 @@ public class ShoppingCartServiceImplDecisionServer implements ShoppingCartServic
 
 	}
 
-	@Override
+	//@Override
 	public ShoppingCart getShoppingCart(String cartId) {
 		if (!cartDB.containsKey(cartId)) {
 			ShoppingCart c = new ShoppingCart();
@@ -87,7 +87,7 @@ public class ShoppingCartServiceImplDecisionServer implements ShoppingCartServic
 		}
 	}
 
-	@Override
+	//@Override
 	public void priceShoppingCart(ShoppingCart sc) {
 		if (sc != null) {
 
@@ -110,7 +110,7 @@ public class ShoppingCartServiceImplDecisionServer implements ShoppingCartServic
 		}
 	}
 
-	@Override
+	//@Override
 	public Product getProduct(String itemId) {
 		if (!productMap.containsKey(itemId)) {
 
