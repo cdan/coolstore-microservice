@@ -14,7 +14,8 @@ import com.redhat.coolstore.model.ShoppingCart;
 import com.redhat.coolstore.model.ShoppingCartItem;
 
 @Component
-public class ShoppingCartServiceImpl implements ShoppingCartService {
+public class ShoppingCartServiceImpl {
+//public class ShoppingCartServiceImpl implements ShoppingCartService {
 	
 	@Autowired
 	ShippingService ss;
